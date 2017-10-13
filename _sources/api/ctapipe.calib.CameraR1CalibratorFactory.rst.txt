@@ -1,0 +1,45 @@
+CameraR1CalibratorFactory
+=========================
+
+.. currentmodule:: ctapipe.calib
+
+.. autoclass:: CameraR1CalibratorFactory
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~CameraR1CalibratorFactory.description
+      ~CameraR1CalibratorFactory.ff_path
+      ~CameraR1CalibratorFactory.name
+      ~CameraR1CalibratorFactory.origin
+      ~CameraR1CalibratorFactory.pe_path
+      ~CameraR1CalibratorFactory.pedestal_path
+      ~CameraR1CalibratorFactory.subclass_names
+      ~CameraR1CalibratorFactory.subclasses
+      ~CameraR1CalibratorFactory.tf_path
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CameraR1CalibratorFactory.get_factory_name
+      ~CameraR1CalibratorFactory.get_product_name
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: description
+   .. autoattribute:: ff_path
+   .. autoattribute:: name
+   .. autoattribute:: origin
+   .. autoattribute:: pe_path
+   .. autoattribute:: pedestal_path
+   .. autoattribute:: subclass_names
+   .. autoattribute:: subclasses
+   .. autoattribute:: tf_path
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_factory_name
+   .. automethod:: get_product_name

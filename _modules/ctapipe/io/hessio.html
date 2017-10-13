@@ -1,0 +1,504 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ctapipe.io.hessio &mdash; ctapipe v0.3.1.post909+gitfe9d87e</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="ctapipe v0.3.1.post909+gitfe9d87e" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> ctapipe
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.1.post909+gitfe9d87e
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../development/index.html">Development Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/index.html">Command line tools (<code class="docutils literal"><span class="pre">tools</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analysis/index.html">Analysis (<code class="docutils literal"><span class="pre">analysis</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../calib/index.html">Calibration (<code class="docutils literal"><span class="pre">calib</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coordinates/index.html">Coordinates (<code class="docutils literal"><span class="pre">coordinates</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../core/index.html">Core Structures and Base Classes (<code class="docutils literal"><span class="pre">core</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../flow/index.html">Flow-based framework (<code class="docutils literal"><span class="pre">flow</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/index.html">Imaging (<code class="docutils literal"><span class="pre">image</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../instrument/index.html">Instrument (<code class="docutils literal"><span class="pre">instrument</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../io/index.html">Input/Output (<code class="docutils literal"><span class="pre">io</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reco/index.html">Reconstruction (<code class="docutils literal"><span class="pre">reco</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../utils/index.html">Utilities (<code class="docutils literal"><span class="pre">utils</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../visualization/index.html">Visualization (<code class="docutils literal"><span class="pre">visualization</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../FAQ.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bibliography.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Change Log</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">ctapipe</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>ctapipe.io.hessio</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for ctapipe.io.hessio</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Licensed under a 3-clause BSD style license - see LICENSE.rst</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Components to read HESSIO data.  </span>
+
+<span class="sd">This requires the hessio python library to be installed</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="k">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="k">import</span> <span class="n">Angle</span>
+<span class="kn">from</span> <span class="nn">astropy.time</span> <span class="k">import</span> <span class="n">Time</span>
+
+<span class="kn">from</span> <span class="nn">.containers</span> <span class="k">import</span> <span class="n">DataContainer</span>
+<span class="kn">from</span> <span class="nn">..core</span> <span class="k">import</span> <span class="n">Provenance</span>
+<span class="kn">from</span> <span class="nn">..instrument</span> <span class="k">import</span> <span class="n">TelescopeDescription</span><span class="p">,</span> <span class="n">SubarrayDescription</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">pyhessio</span> <span class="k">import</span> <span class="n">open_hessio</span>
+    <span class="kn">from</span> <span class="nn">pyhessio</span> <span class="k">import</span> <span class="n">HessioError</span>
+    <span class="kn">from</span> <span class="nn">pyhessio</span> <span class="k">import</span> <span class="n">HessioTelescopeIndexError</span>
+    <span class="kn">from</span> <span class="nn">pyhessio</span> <span class="k">import</span> <span class="n">HessioGeneralError</span>
+<span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">fatal</span><span class="p">(</span>
+        <span class="s2">&quot;the `pyhessio` python module is required to access MC data: </span><span class="si">{}</span><span class="s2">&quot;</span>
+            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+    <span class="k">raise</span> <span class="n">err</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;hessio_event_source&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">hessio_get_list_event_ids</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">max_events</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Faster method to get a list of all the event ids in the hessio file.</span>
+<span class="sd">    This list can also be used to find out the number of events that exist</span>
+<span class="sd">    in the file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    url : str</span>
+<span class="sd">        path to file to open</span>
+<span class="sd">    max_events : int, optional</span>
+<span class="sd">        maximum number of events to read</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    event_id_list : list[num_events]</span>
+<span class="sd">        A list with all the event ids that are in the file.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;This method is slow. Need to find faster method.&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">open_hessio</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">pyhessio</span><span class="p">:</span>
+            <span class="n">Provenance</span><span class="p">()</span><span class="o">.</span><span class="n">add_input_file</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="s1">&#39;r0.sub.evt&#39;</span><span class="p">)</span>
+            <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">event_id_list</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">eventstream</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">move_to_next_event</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">event_id</span> <span class="ow">in</span> <span class="n">eventstream</span><span class="p">:</span>
+                <span class="n">event_id_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event_id</span><span class="p">)</span>
+                <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">max_events</span> <span class="ow">and</span> <span class="n">counter</span> <span class="o">&gt;=</span> <span class="n">max_events</span><span class="p">:</span>
+                    <span class="n">pyhessio</span><span class="o">.</span><span class="n">close_file</span><span class="p">()</span>
+                    <span class="k">break</span>
+            <span class="k">return</span> <span class="n">event_id_list</span>
+    <span class="k">except</span> <span class="n">HessioError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;hessio_event_source failed to open &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span>
+                           <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="hessio_event_source"><a class="viewcode-back" href="../../../api/ctapipe.io.hessio.hessio_event_source.html#ctapipe.io.hessio.hessio_event_source">[docs]</a><span class="k">def</span> <span class="nf">hessio_event_source</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">max_events</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">allowed_tels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                        <span class="n">requested_event</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_event_id</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A generator that streams data from an EventIO/HESSIO MC data file</span>
+<span class="sd">    (e.g. a standard CTA data file.)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    url : str</span>
+<span class="sd">        path to file to open</span>
+<span class="sd">    max_events : int, optional</span>
+<span class="sd">        maximum number of events to read</span>
+<span class="sd">    allowed_tels : list[int]</span>
+<span class="sd">        select only a subset of telescope, if None, all are read. This can</span>
+<span class="sd">        be used for example emulate the final CTA data format, where there</span>
+<span class="sd">        would be 1 telescope per file (whereas in current monte-carlo,</span>
+<span class="sd">        they are all interleaved into one file)</span>
+<span class="sd">    requested_event : int</span>
+<span class="sd">        Seek to a paricular event index</span>
+<span class="sd">    use_event_id : bool</span>
+<span class="sd">        If True ,&#39;requested_event&#39; now seeks for a particular event id instead</span>
+<span class="sd">        of index</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">with</span> <span class="n">open_hessio</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">pyhessio</span><span class="p">:</span>
+        <span class="c1"># the container is initialized once, and data is replaced within</span>
+        <span class="c1"># it after each yield</span>
+        <span class="n">Provenance</span><span class="p">()</span><span class="o">.</span><span class="n">add_input_file</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="s1">&#39;dl0.sub.evt&#39;</span><span class="p">)</span>
+        <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">eventstream</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">move_to_next_event</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">allowed_tels</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">allowed_tels</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">allowed_tels</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">DataContainer</span><span class="p">()</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">meta</span><span class="p">[</span><span class="s1">&#39;origin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;hessio&quot;</span>
+
+        <span class="c1"># some hessio_event_source specific parameters</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">meta</span><span class="p">[</span><span class="s1">&#39;input&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">url</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">meta</span><span class="p">[</span><span class="s1">&#39;max_events&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">max_events</span>
+
+        <span class="k">for</span> <span class="n">event_id</span> <span class="ow">in</span> <span class="n">eventstream</span><span class="p">:</span>
+
+            <span class="c1"># Seek to requested event</span>
+            <span class="k">if</span> <span class="n">requested_event</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">current</span> <span class="o">=</span> <span class="n">counter</span>
+                <span class="k">if</span> <span class="n">use_event_id</span><span class="p">:</span>
+                    <span class="n">current</span> <span class="o">=</span> <span class="n">event_id</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">current</span> <span class="o">==</span> <span class="n">requested_event</span><span class="p">:</span>
+                    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">continue</span>
+
+            <span class="n">data</span><span class="o">.</span><span class="n">r0</span><span class="o">.</span><span class="n">run_id</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_run_number</span><span class="p">()</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">r0</span><span class="o">.</span><span class="n">event_id</span> <span class="o">=</span> <span class="n">event_id</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">r0</span><span class="o">.</span><span class="n">tels_with_data</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">pyhessio</span><span class="o">.</span><span class="n">get_teldata_list</span><span class="p">())</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">r1</span><span class="o">.</span><span class="n">run_id</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_run_number</span><span class="p">()</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">r1</span><span class="o">.</span><span class="n">event_id</span> <span class="o">=</span> <span class="n">event_id</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">r1</span><span class="o">.</span><span class="n">tels_with_data</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">pyhessio</span><span class="o">.</span><span class="n">get_teldata_list</span><span class="p">())</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">dl0</span><span class="o">.</span><span class="n">run_id</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_run_number</span><span class="p">()</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">dl0</span><span class="o">.</span><span class="n">event_id</span> <span class="o">=</span> <span class="n">event_id</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">dl0</span><span class="o">.</span><span class="n">tels_with_data</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">pyhessio</span><span class="o">.</span><span class="n">get_teldata_list</span><span class="p">())</span>
+
+            <span class="c1"># handle telescope filtering by taking the intersection of</span>
+            <span class="c1"># tels_with_data and allowed_tels</span>
+            <span class="k">if</span> <span class="n">allowed_tels</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">selected</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">r0</span><span class="o">.</span><span class="n">tels_with_data</span> <span class="o">&amp;</span> <span class="n">allowed_tels</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">selected</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>  <span class="c1"># skip event</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">r0</span><span class="o">.</span><span class="n">tels_with_data</span> <span class="o">=</span> <span class="n">selected</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">r1</span><span class="o">.</span><span class="n">tels_with_data</span> <span class="o">=</span> <span class="n">selected</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">dl0</span><span class="o">.</span><span class="n">tels_with_data</span> <span class="o">=</span> <span class="n">selected</span>
+
+            <span class="n">data</span><span class="o">.</span><span class="n">trig</span><span class="o">.</span><span class="n">tels_with_trigger</span> \
+                <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_central_event_teltrg_list</span><span class="p">()</span>
+            <span class="n">time_s</span><span class="p">,</span> <span class="n">time_ns</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_central_event_gps_time</span><span class="p">()</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">trig</span><span class="o">.</span><span class="n">gps_time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="n">time_s</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="n">time_ns</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">ns</span><span class="p">,</span>
+                                      <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;unix&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;utc&#39;</span><span class="p">)</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_mc_shower_energy</span><span class="p">()</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">TeV</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">alt</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">pyhessio</span><span class="o">.</span><span class="n">get_mc_shower_altitude</span><span class="p">(),</span> <span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">az</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">pyhessio</span><span class="o">.</span><span class="n">get_mc_shower_azimuth</span><span class="p">(),</span> <span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">core_x</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_mc_event_xcore</span><span class="p">()</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">core_y</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_mc_event_ycore</span><span class="p">()</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+            <span class="n">first_int</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_mc_shower_h_first_int</span><span class="p">()</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">h_first_int</span> <span class="o">=</span> <span class="n">first_int</span>
+
+            <span class="c1"># mc run header data</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">mcheader</span><span class="o">.</span><span class="n">run_array_direction</span> <span class="o">=</span> \
+                <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_mc_run_array_direction</span><span class="p">()</span>
+
+            <span class="n">data</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="n">counter</span>
+
+            <span class="c1"># this should be done in a nicer way to not re-allocate the</span>
+            <span class="c1"># data each time (right now it&#39;s just deleted and garbage</span>
+            <span class="c1"># collected)</span>
+
+            <span class="n">data</span><span class="o">.</span><span class="n">r0</span><span class="o">.</span><span class="n">tel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">r1</span><span class="o">.</span><span class="n">tel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">dl0</span><span class="o">.</span><span class="n">tel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">dl1</span><span class="o">.</span><span class="n">tel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">tel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>  <span class="c1"># clear the previous telescopes</span>
+
+            <span class="n">_fill_instrument_info</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pyhessio</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">tel_id</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">r0</span><span class="o">.</span><span class="n">tels_with_data</span><span class="p">:</span>
+
+                <span class="c1"># event.mc.tel[tel_id] = MCCameraContainer()</span>
+
+                <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">dc_to_pe</span> \
+                    <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_calibration</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">pedestal</span> \
+                    <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_pedestal</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+
+                <span class="n">data</span><span class="o">.</span><span class="n">r0</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">adc_samples</span> <span class="o">=</span> \
+                    <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_adc_sample</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">r0</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">adc_samples</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="c1"># To handle ASTRI and dst files</span>
+                    <span class="n">data</span><span class="o">.</span><span class="n">r0</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">adc_samples</span> <span class="o">=</span> \
+                        <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_adc_sum</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)[</span><span class="o">...</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">r0</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">adc_sums</span> <span class="o">=</span> \
+                    <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_adc_sum</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">reference_pulse_shape</span> <span class="o">=</span> \
+                    <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_ref_shapes</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+
+                <span class="n">nsamples</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_event_num_samples</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">nsamples</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">nsamples</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">r0</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">num_samples</span> <span class="o">=</span> <span class="n">nsamples</span>
+
+                <span class="c1"># load the data per telescope/pixel</span>
+                <span class="n">hessio_mc_npe</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_mc_number_photon_electron</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">photo_electron_image</span> \
+                    <span class="o">=</span> <span class="n">hessio_mc_npe</span><span class="p">(</span><span class="n">telescope_id</span><span class="o">=</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">meta</span><span class="p">[</span><span class="s1">&#39;refstep&#39;</span><span class="p">]</span> <span class="o">=</span> \
+                    <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_ref_step</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">time_slice</span> <span class="o">=</span> \
+                    <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_time_slice</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">azimuth_raw</span> <span class="o">=</span> \
+                    <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_azimuth_raw</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">altitude_raw</span> <span class="o">=</span> \
+                    <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_altitude_raw</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">azimuth_cor</span> <span class="o">=</span> \
+                    <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_azimuth_cor</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">mc</span><span class="o">.</span><span class="n">tel</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span><span class="o">.</span><span class="n">altitude_cor</span> <span class="o">=</span> \
+                    <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_altitude_cor</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="n">data</span>
+            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="k">if</span> <span class="n">max_events</span> <span class="ow">and</span> <span class="n">counter</span> <span class="o">&gt;=</span> <span class="n">max_events</span><span class="p">:</span>
+                <span class="n">pyhessio</span><span class="o">.</span><span class="n">close_file</span><span class="p">()</span>
+                <span class="k">return</span></div>
+
+
+<span class="k">def</span> <span class="nf">_fill_instrument_info</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pyhessio</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    fill the data.inst structure with instrumental information.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data: DataContainer</span>
+<span class="sd">        data container to fill in</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">telescope_ids</span><span class="p">:</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">telescope_ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">pyhessio</span><span class="o">.</span><span class="n">get_telescope_ids</span><span class="p">())</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">subarray</span> <span class="o">=</span> <span class="n">SubarrayDescription</span><span class="p">(</span><span class="s2">&quot;MonteCarloArray&quot;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">tel_id</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">telescope_ids</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+
+                <span class="n">pix_pos</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_pixel_position</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+                <span class="n">foclen</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_optical_foclen</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+                <span class="n">mirror_area</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_mirror_area</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">**</span> <span class="mi">2</span>
+                <span class="n">num_tiles</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_mirror_number</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="n">tel_pos</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_telescope_position</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+
+                <span class="n">tel</span> <span class="o">=</span> <span class="n">TelescopeDescription</span><span class="o">.</span><span class="n">guess</span><span class="p">(</span><span class="o">*</span><span class="n">pix_pos</span><span class="p">,</span> <span class="n">foclen</span><span class="p">)</span>
+                <span class="n">tel</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">mirror_area</span> <span class="o">=</span> <span class="n">mirror_area</span>
+                <span class="n">tel</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">num_mirror_tiles</span> <span class="o">=</span> <span class="n">num_tiles</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">subarray</span><span class="o">.</span><span class="n">tels</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">tel</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">subarray</span><span class="o">.</span><span class="n">positions</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">tel_pos</span>
+
+                <span class="c1"># deprecated fields that will become part of</span>
+                <span class="c1"># TelescopeDescription or SubrrayDescription</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">optical_foclen</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">foclen</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">pixel_pos</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">pix_pos</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">tel_pos</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">tel_pos</span>
+
+                <span class="n">nchans</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_num_channel</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="n">npix</span> <span class="o">=</span> <span class="n">pyhessio</span><span class="o">.</span><span class="n">get_num_pixels</span><span class="p">(</span><span class="n">tel_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">num_channels</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">nchans</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">num_pixels</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">npix</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">mirror_dish_area</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">mirror_area</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">mirror_numtiles</span><span class="p">[</span><span class="n">tel_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_tiles</span>
+
+            <span class="k">except</span> <span class="n">HessioGeneralError</span><span class="p">:</span>
+                <span class="k">pass</span>
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright ctapipe developers.  Last updated 13 Oct 2017 08:17.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.3.1.post909+gitfe9d87e',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

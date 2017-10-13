@@ -1,0 +1,29 @@
+CameraDL0Reducer
+================
+
+.. currentmodule:: ctapipe.calib.camera.dl0
+
+.. autoclass:: CameraDL0Reducer
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~CameraDL0Reducer.name
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CameraDL0Reducer.check_r1_exists
+      ~CameraDL0Reducer.reduce
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: name
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: check_r1_exists
+   .. automethod:: reduce

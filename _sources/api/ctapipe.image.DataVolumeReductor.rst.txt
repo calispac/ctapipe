@@ -1,0 +1,31 @@
+DataVolumeReductor
+==================
+
+.. currentmodule:: ctapipe.image
+
+.. autoclass:: DataVolumeReductor
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~DataVolumeReductor.name
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~DataVolumeReductor.check_neighbour_set
+      ~DataVolumeReductor.reduce_waveforms
+      ~DataVolumeReductor.requires_neighbours
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: name
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: check_neighbour_set
+   .. automethod:: reduce_waveforms
+   .. automethod:: requires_neighbours

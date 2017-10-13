@@ -1,0 +1,27 @@
+CHECMWaveformCleanerLocal
+=========================
+
+.. currentmodule:: ctapipe.image.waveform_cleaning
+
+.. autoclass:: CHECMWaveformCleanerLocal
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~CHECMWaveformCleanerLocal.name
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CHECMWaveformCleanerLocal.get_extractor
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: name
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_extractor

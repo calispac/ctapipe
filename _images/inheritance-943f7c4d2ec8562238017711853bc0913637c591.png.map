@@ -1,0 +1,14 @@
+<map id="inheritance0046ded3e9" name="inheritance0046ded3e9">
+<area shape="rect" id="node1" title="A singleton application with full configuration support." alt="" coords="619,189,682,206"/>
+<area shape="rect" id="node14" title="A base class for all executable tools (applications) that handles" alt="" coords="715,189,764,206"/>
+<area shape="rect" id="node2" title="A configurable that only allows one instance." alt="" coords="475,189,586,206"/>
+<area shape="rect" id="node3" title="Base class of all Components (sometimes called" alt="" coords="357,155,424,172"/>
+<area shape="rect" id="node7" title="A base class for all class factories that exist in the `Tools`/`Components`" alt="" coords="506,155,555,172"/>
+<area shape="rect" id="node10" title="A parent class for Configurables that log." alt="" coords="338,189,442,206"/>
+<area shape="rect" id="node6" title="Generic class that can hold and accumulate data to be passed" alt="" coords="31,139,88,156"/>
+<area shape="rect" id="node8" title="Class for storing data in `Containers`." alt="" coords="35,105,84,122"/>
+<area shape="rect" id="node9" title="The base class for all classes that have descriptors." alt="" coords="18,172,100,190"/>
+<area shape="rect" id="node11" title="A dictionary of sub&#45;containers that can be added to a Container. This" alt="" coords="150,71,200,88"/>
+<area shape="rect" id="node12" title="defaultdict(default_factory[, ...]) &#45;&#45;&gt; dict with default factory" alt="" coords="29,71,90,88"/>
+<area shape="rect" id="node13" title="Manage the provenance info for a stack of *activities*" alt="" coords="26,37,93,55"/>
+</map>

@@ -1,0 +1,23 @@
+R0CameraContainer
+=================
+
+.. currentmodule:: ctapipe.io.containers
+
+.. autoclass:: R0CameraContainer
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~R0CameraContainer.adc_samples
+      ~R0CameraContainer.adc_sums
+      ~R0CameraContainer.meta
+      ~R0CameraContainer.num_samples
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: adc_samples
+   .. autoattribute:: adc_sums
+   .. autoattribute:: meta
+   .. autoattribute:: num_samples

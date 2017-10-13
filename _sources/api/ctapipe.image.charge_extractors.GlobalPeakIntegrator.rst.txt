@@ -1,0 +1,17 @@
+GlobalPeakIntegrator
+====================
+
+.. currentmodule:: ctapipe.image.charge_extractors
+
+.. autoclass:: GlobalPeakIntegrator
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~GlobalPeakIntegrator.name
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: name

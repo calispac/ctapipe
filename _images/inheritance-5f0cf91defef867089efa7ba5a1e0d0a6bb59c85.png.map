@@ -1,0 +1,11 @@
+<map id="inheritance2b17e99a04" name="inheritance2b17e99a04">
+<area shape="rect" id="node1" href="../api/ctapipe.calib.camera.calibrator.CameraCalibrator.html#ctapipe.calib.camera.calibrator.CameraCalibrator" target="_top" title="Conveniance calibrator to handle the full camera calibration." alt="" coords="465,4,567,23"/>
+<area shape="rect" id="node2" title="Base class of all Components (sometimes called" alt="" coords="344,79,419,99"/>
+<area shape="rect" id="node3" href="../api/ctapipe.calib.camera.dl0.CameraDL0Reducer.html#ctapipe.calib.camera.dl0.CameraDL0Reducer" target="_top" title="Parent class for the dl0 data volume reducers. Fills the dl0 container." alt="" coords="459,42,573,61"/>
+<area shape="rect" id="node4" href="../api/ctapipe.calib.camera.dl1.CameraDL1Calibrator.html#ctapipe.calib.camera.dl1.CameraDL1Calibrator" target="_top" title="The calibrator for DL1 charge extraction. Fills the dl1 container." alt="" coords="455,79,577,99"/>
+<area shape="rect" id="node5" title="The base R1&#45;level calibrator. Fills the r1 container." alt="" coords="459,117,573,136"/>
+<area shape="rect" id="node7" title="A base class for all class factories that exist in the `Tools`/`Components`" alt="" coords="489,154,543,174"/>
+<area shape="rect" id="node11" href="../api/ctapipe.calib.camera.r1.HessioR1Calibrator.html#ctapipe.calib.camera.r1.HessioR1Calibrator" target="_top" title="The R1 calibrator for hessio files. Fills the r1 container." alt="" coords="634,117,743,136"/>
+<area shape="rect" id="node6" href="../api/ctapipe.calib.camera.r1.CameraR1CalibratorFactory.html#ctapipe.calib.camera.r1.CameraR1CalibratorFactory" target="_top" title="The R1 calibrator `ctapipe.core.factory.Factory`. This" alt="" coords="614,154,764,174"/>
+<area shape="rect" id="node10" title="The base class for all classes that have descriptors." alt="" coords="4,79,95,99"/>
+</map>

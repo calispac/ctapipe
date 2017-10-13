@@ -1,0 +1,12 @@
+<map id="inheritancec8a2081ea2" name="inheritancec8a2081ea2">
+<area shape="rect" id="node1" href="../api/ctapipe.image.charge_extractors.AverageWfPeakIntegrator.html#ctapipe.image.charge_extractors.AverageWfPeakIntegrator" target="_top" title="Charge extractor that defines an integration window defined by the " alt="" coords="676,3,765,15"/>
+<area shape="rect" id="node11" href="../api/ctapipe.image.charge_extractors.GlobalPeakIntegrator.html#ctapipe.image.charge_extractors.GlobalPeakIntegrator" target="_top" title="Charge extractor that defines an integration window about the global" alt="" coords="682,27,759,39"/>
+<area shape="rect" id="node13" href="../api/ctapipe.image.charge_extractors.LocalPeakIntegrator.html#ctapipe.image.charge_extractors.LocalPeakIntegrator" target="_top" title="Charge extractor that defines an integration window about the local" alt="" coords="684,51,757,63"/>
+<area shape="rect" id="node14" href="../api/ctapipe.image.charge_extractors.NeighbourPeakIntegrator.html#ctapipe.image.charge_extractors.NeighbourPeakIntegrator" target="_top" title="Charge extractor that defines an integration window defined by the " alt="" coords="676,75,765,88"/>
+<area shape="rect" id="node4" title="Base class of all Components (sometimes called" alt="" coords="221,52,269,64"/>
+<area shape="rect" id="node6" title="A base class for all class factories that exist in the `Tools`/`Components`" alt="" coords="306,63,341,76"/>
+<area shape="rect" id="node5" href="../api/ctapipe.image.charge_extractors.ChargeExtractorFactory.html#ctapipe.image.charge_extractors.ChargeExtractorFactory" target="_top" title="Factory to obtain a ChargeExtractor." alt="" coords="378,63,462,76"/>
+<area shape="rect" id="node9" href="../api/ctapipe.image.charge_extractors.FullIntegrator.html#ctapipe.image.charge_extractors.FullIntegrator" target="_top" title="FullIntegrator" alt="" coords="492,27,544,40"/>
+<area shape="rect" id="node12" title="The base class for all classes that have descriptors." alt="" coords="3,52,61,64"/>
+<area shape="rect" id="node16" href="../api/ctapipe.image.charge_extractors.SimpleIntegrator.html#ctapipe.image.charge_extractors.SimpleIntegrator" target="_top" title="SimpleIntegrator" alt="" coords="582,63,645,76"/>
+</map>

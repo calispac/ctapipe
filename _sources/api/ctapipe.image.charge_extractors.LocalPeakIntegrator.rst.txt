@@ -1,0 +1,17 @@
+LocalPeakIntegrator
+===================
+
+.. currentmodule:: ctapipe.image.charge_extractors
+
+.. autoclass:: LocalPeakIntegrator
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~LocalPeakIntegrator.name
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: name

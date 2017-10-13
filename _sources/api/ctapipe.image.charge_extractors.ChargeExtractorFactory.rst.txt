@@ -1,0 +1,49 @@
+ChargeExtractorFactory
+======================
+
+.. currentmodule:: ctapipe.image.charge_extractors
+
+.. autoclass:: ChargeExtractorFactory
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~ChargeExtractorFactory.description
+      ~ChargeExtractorFactory.extractor
+      ~ChargeExtractorFactory.lwt
+      ~ChargeExtractorFactory.name
+      ~ChargeExtractorFactory.sig_amp_cut_HG
+      ~ChargeExtractorFactory.sig_amp_cut_LG
+      ~ChargeExtractorFactory.subclass_names
+      ~ChargeExtractorFactory.subclasses
+      ~ChargeExtractorFactory.t0
+      ~ChargeExtractorFactory.window_shift
+      ~ChargeExtractorFactory.window_width
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ChargeExtractorFactory.get_factory_name
+      ~ChargeExtractorFactory.get_product_name
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: description
+   .. autoattribute:: extractor
+   .. autoattribute:: lwt
+   .. autoattribute:: name
+   .. autoattribute:: sig_amp_cut_HG
+   .. autoattribute:: sig_amp_cut_LG
+   .. autoattribute:: subclass_names
+   .. autoattribute:: subclasses
+   .. autoattribute:: t0
+   .. autoattribute:: window_shift
+   .. autoattribute:: window_width
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_factory_name
+   .. automethod:: get_product_name

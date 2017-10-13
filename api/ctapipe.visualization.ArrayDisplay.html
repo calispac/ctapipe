@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ArrayDisplay &mdash; ctapipe v0.3.1.post909+gitfe9d87e</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="ctapipe v0.3.1.post909+gitfe9d87e" href="../index.html"/>
+        <link rel="up" title="Visualization (visualization)" href="../visualization/index.html"/>
+        <link rel="next" title="CameraDisplay" href="ctapipe.visualization.CameraDisplay.html"/>
+        <link rel="prev" title="Visualization (visualization)" href="../visualization/index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ctapipe
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.1.post909+gitfe9d87e
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Development Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Command line tools (<code class="docutils literal"><span class="pre">tools</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis (<code class="docutils literal"><span class="pre">analysis</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calib/index.html">Calibration (<code class="docutils literal"><span class="pre">calib</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coordinates/index.html">Coordinates (<code class="docutils literal"><span class="pre">coordinates</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core/index.html">Core Structures and Base Classes (<code class="docutils literal"><span class="pre">core</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../flow/index.html">Flow-based framework (<code class="docutils literal"><span class="pre">flow</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../image/index.html">Imaging (<code class="docutils literal"><span class="pre">image</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instrument/index.html">Instrument (<code class="docutils literal"><span class="pre">instrument</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/index.html">Input/Output (<code class="docutils literal"><span class="pre">io</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reco/index.html">Reconstruction (<code class="docutils literal"><span class="pre">reco</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">Utilities (<code class="docutils literal"><span class="pre">utils</span></code>)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../visualization/index.html">Visualization (<code class="docutils literal"><span class="pre">visualization</span></code>)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../visualization/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visualization/index.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../visualization/index.html#reference-api">Reference/API</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../visualization/index.html#module-ctapipe.visualization">ctapipe.visualization Package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../visualization/index.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ctapipe</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../visualization/index.html">Visualization (<code class="docutils literal"><span class="pre">visualization</span></code>)</a> &raquo;</li>
+        
+      <li>ArrayDisplay</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/ctapipe.visualization.ArrayDisplay.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="arraydisplay">
+<h1>ArrayDisplay<a class="headerlink" href="#arraydisplay" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ctapipe.visualization.ArrayDisplay">
+<em class="property">class </em><code class="descclassname">ctapipe.visualization.</code><code class="descname">ArrayDisplay</code><span class="sig-paren">(</span><em>telx</em>, <em>tely</em>, <em>tel_type=None</em>, <em>radius=20</em>, <em>axes=None</em>, <em>title='Array'</em>, <em>autoupdate=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ctapipe/visualization/mpl.html#ArrayDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ctapipe.visualization.ArrayDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Display a top-town view of a telescope array</p>
+<p class="rubric">Attributes Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#ctapipe.visualization.ArrayDisplay.values" title="ctapipe.visualization.ArrayDisplay.values"><code class="xref py py-obj docutils literal"><span class="pre">values</span></code></a></td>
+<td>An array containing a value per telescope</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#ctapipe.visualization.ArrayDisplay.add_ellipse" title="ctapipe.visualization.ArrayDisplay.add_ellipse"><code class="xref py py-obj docutils literal"><span class="pre">add_ellipse</span></code></a>(centroid,&nbsp;length,&nbsp;width,&nbsp;angle,&nbsp;…)</td>
+<td>plot an ellipse on top of the camera</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ctapipe.visualization.ArrayDisplay.add_polygon" title="ctapipe.visualization.ArrayDisplay.add_polygon"><code class="xref py py-obj docutils literal"><span class="pre">add_polygon</span></code></a>(centroid,&nbsp;radius[,&nbsp;nsides])</td>
+<td>plot a polygon on top of the camera</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ctapipe.visualization.ArrayDisplay.overlay_axis" title="ctapipe.visualization.ArrayDisplay.overlay_axis"><code class="xref py py-obj docutils literal"><span class="pre">overlay_axis</span></code></a>(momparams,&nbsp;tel_position,&nbsp;**kwargs)</td>
+<td>helper to overlay ellipse from a <code class="xref py py-obj docutils literal"><span class="pre">reco.MomentParameters</span></code> structure</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ctapipe.visualization.ArrayDisplay.overlay_moments" title="ctapipe.visualization.ArrayDisplay.overlay_moments"><code class="xref py py-obj docutils literal"><span class="pre">overlay_moments</span></code></a>(momparams,&nbsp;tel_position,&nbsp;…)</td>
+<td>helper to overlay ellipse from a <code class="xref py py-obj docutils literal"><span class="pre">reco.MomentParameters</span></code> structure</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="ctapipe.visualization.ArrayDisplay.values">
+<code class="descname">values</code><a class="headerlink" href="#ctapipe.visualization.ArrayDisplay.values" title="Permalink to this definition">¶</a></dt>
+<dd><p>An array containing a value per telescope</p>
+</dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="ctapipe.visualization.ArrayDisplay.add_ellipse">
+<code class="descname">add_ellipse</code><span class="sig-paren">(</span><em>centroid</em>, <em>length</em>, <em>width</em>, <em>angle</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ctapipe/visualization/mpl.html#ArrayDisplay.add_ellipse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ctapipe.visualization.ArrayDisplay.add_ellipse" title="Permalink to this definition">¶</a></dt>
+<dd><p>plot an ellipse on top of the camera</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>centroid: (float, float)</strong></p>
+<blockquote>
+<div><p>position of centroid</p>
+</div></blockquote>
+<p><strong>length: float</strong></p>
+<blockquote>
+<div><p>major axis</p>
+</div></blockquote>
+<p><strong>width: float</strong></p>
+<blockquote>
+<div><p>minor axis</p>
+</div></blockquote>
+<p><strong>angle: float</strong></p>
+<blockquote>
+<div><p>rotation angle wrt x-axis about the centroid, anticlockwise, in radians</p>
+</div></blockquote>
+<p><strong>asymmetry: float</strong></p>
+<blockquote>
+<div><p>3rd-order moment for directionality if known</p>
+</div></blockquote>
+<p><strong>kwargs:</strong></p>
+<blockquote class="last">
+<div><p>any MatPlotLib style arguments to pass to the Ellipse patch</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ctapipe.visualization.ArrayDisplay.add_polygon">
+<code class="descname">add_polygon</code><span class="sig-paren">(</span><em>centroid</em>, <em>radius</em>, <em>nsides=3</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ctapipe/visualization/mpl.html#ArrayDisplay.add_polygon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ctapipe.visualization.ArrayDisplay.add_polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>plot a polygon on top of the camera</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>centroid: (float, float)</strong></p>
+<blockquote>
+<div><p>position of centroid</p>
+</div></blockquote>
+<p><strong>radius: float</strong></p>
+<blockquote>
+<div><p>radius</p>
+</div></blockquote>
+<p><strong>nsides: int</strong></p>
+<blockquote>
+<div><p>Number of points on polygon</p>
+</div></blockquote>
+<p><strong>kwargs:</strong></p>
+<blockquote class="last">
+<div><p>any MatPlotLib style arguments to pass to the RegularPolygon patch</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ctapipe.visualization.ArrayDisplay.overlay_axis">
+<code class="descname">overlay_axis</code><span class="sig-paren">(</span><em>momparams</em>, <em>tel_position</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ctapipe/visualization/mpl.html#ArrayDisplay.overlay_axis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ctapipe.visualization.ArrayDisplay.overlay_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper to overlay ellipse from a <code class="xref py py-obj docutils literal"><span class="pre">reco.MomentParameters</span></code> structure</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>momparams: `reco.MomentParameters`</strong></p>
+<blockquote>
+<div><p>structuring containing Hillas-style parameterization</p>
+</div></blockquote>
+<p><strong>tel_position: list</strong></p>
+<blockquote>
+<div><p>(x, y) positions of each telescope</p>
+</div></blockquote>
+<p><strong>kwargs: key=value</strong></p>
+<blockquote class="last">
+<div><p>any style keywords to pass to matplotlib (e.g. color=’red’
+or linewidth=6)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ctapipe.visualization.ArrayDisplay.overlay_moments">
+<code class="descname">overlay_moments</code><span class="sig-paren">(</span><em>momparams</em>, <em>tel_position</em>, <em>scale_fac</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ctapipe/visualization/mpl.html#ArrayDisplay.overlay_moments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ctapipe.visualization.ArrayDisplay.overlay_moments" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper to overlay ellipse from a <code class="xref py py-obj docutils literal"><span class="pre">reco.MomentParameters</span></code> structure</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>momparams: `reco.MomentParameters`</strong></p>
+<blockquote>
+<div><p>structuring containing Hillas-style parameterization</p>
+</div></blockquote>
+<p><strong>tel_position: list</strong></p>
+<blockquote>
+<div><p>(x, y) positions of each telescope</p>
+</div></blockquote>
+<p><strong>scale_fac: float</strong></p>
+<blockquote>
+<div><p>scaling factor to apply to width and length when overlaying moments</p>
+</div></blockquote>
+<p><strong>kwargs: key=value</strong></p>
+<blockquote class="last">
+<div><p>any style keywords to pass to matplotlib (e.g. color=’red’
+or linewidth=6)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ctapipe.visualization.CameraDisplay.html" class="btn btn-neutral float-right" title="CameraDisplay" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../visualization/index.html" class="btn btn-neutral" title="Visualization (visualization)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright ctapipe developers.  Last updated 13 Oct 2017 08:17.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.3.1.post909+gitfe9d87e',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

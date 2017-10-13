@@ -1,0 +1,35 @@
+InstrumentContainer
+===================
+
+.. currentmodule:: ctapipe.io.containers
+
+.. autoclass:: InstrumentContainer
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~InstrumentContainer.meta
+      ~InstrumentContainer.mirror_dish_area
+      ~InstrumentContainer.mirror_numtiles
+      ~InstrumentContainer.num_channels
+      ~InstrumentContainer.num_pixels
+      ~InstrumentContainer.optical_foclen
+      ~InstrumentContainer.pixel_pos
+      ~InstrumentContainer.subarray
+      ~InstrumentContainer.tel_pos
+      ~InstrumentContainer.telescope_ids
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: meta
+   .. autoattribute:: mirror_dish_area
+   .. autoattribute:: mirror_numtiles
+   .. autoattribute:: num_channels
+   .. autoattribute:: num_pixels
+   .. autoattribute:: optical_foclen
+   .. autoattribute:: pixel_pos
+   .. autoattribute:: subarray
+   .. autoattribute:: tel_pos
+   .. autoattribute:: telescope_ids

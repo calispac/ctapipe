@@ -1,0 +1,17 @@
+HDF5TableReader
+===============
+
+.. currentmodule:: ctapipe.io.hdftableio
+
+.. autoclass:: HDF5TableReader
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~HDF5TableReader.read
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: read

@@ -1,0 +1,11 @@
+<map id="inheritance8a8e4161a4" name="inheritance8a8e4161a4">
+<area shape="rect" id="node1" title="Waveform cleaner used by CHEC&#45;M." alt="" coords="480,18,592,34"/>
+<area shape="rect" id="node3" href="../api/ctapipe.image.waveform_cleaning.CHECMWaveformCleanerAverage.html#ctapipe.image.waveform_cleaning.CHECMWaveformCleanerAverage" target="_top" title="Waveform cleaner used by CHEC&#45;M." alt="" coords="621,3,765,19"/>
+<area shape="rect" id="node4" href="../api/ctapipe.image.waveform_cleaning.CHECMWaveformCleanerLocal.html#ctapipe.image.waveform_cleaning.CHECMWaveformCleanerLocal" target="_top" title="Waveform cleaner used by CHEC&#45;M." alt="" coords="627,34,759,49"/>
+<area shape="rect" id="node2" title="Base component to handle the cleaning of the waveforms in an image." alt="" coords="368,48,450,64"/>
+<area shape="rect" id="node10" href="../api/ctapipe.image.waveform_cleaning.NullWaveformCleaner.html#ctapipe.image.waveform_cleaning.NullWaveformCleaner" target="_top" title="Dummy waveform cleaner that simply returns its input" alt="" coords="487,48,585,64"/>
+<area shape="rect" id="node5" title="Base class of all Components (sometimes called" alt="" coords="278,64,338,80"/>
+<area shape="rect" id="node8" title="A base class for all class factories that exist in the `Tools`/`Components`" alt="" coords="387,79,431,94"/>
+<area shape="rect" id="node11" href="../api/ctapipe.image.waveform_cleaning.WaveformCleanerFactory.html#ctapipe.image.waveform_cleaning.WaveformCleanerFactory" target="_top" title="Factory to obtain a WaveformCleaner." alt="" coords="480,79,591,94"/>
+<area shape="rect" id="node9" title="The base class for all classes that have descriptors." alt="" coords="3,64,77,80"/>
+</map>

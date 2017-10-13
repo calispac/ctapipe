@@ -1,0 +1,19 @@
+TableReader
+===========
+
+.. currentmodule:: ctapipe.io.hdftableio
+
+.. autoclass:: TableReader
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TableReader.add_column_transform
+      ~TableReader.read
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: add_column_transform
+   .. automethod:: read

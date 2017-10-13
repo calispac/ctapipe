@@ -1,0 +1,37 @@
+DataVolumeReductorFactory
+=========================
+
+.. currentmodule:: ctapipe.image.reductors
+
+.. autoclass:: DataVolumeReductorFactory
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~DataVolumeReductorFactory.description
+      ~DataVolumeReductorFactory.name
+      ~DataVolumeReductorFactory.reductor
+      ~DataVolumeReductorFactory.subclass_names
+      ~DataVolumeReductorFactory.subclasses
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~DataVolumeReductorFactory.get_factory_name
+      ~DataVolumeReductorFactory.get_product_name
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: description
+   .. autoattribute:: name
+   .. autoattribute:: reductor
+   .. autoattribute:: subclass_names
+   .. autoattribute:: subclasses
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_factory_name
+   .. automethod:: get_product_name

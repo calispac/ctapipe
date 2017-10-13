@@ -1,0 +1,19 @@
+SimpleIntegrator
+================
+
+.. currentmodule:: ctapipe.image
+
+.. autoclass:: SimpleIntegrator
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~SimpleIntegrator.name
+      ~SimpleIntegrator.t0
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: name
+   .. autoattribute:: t0

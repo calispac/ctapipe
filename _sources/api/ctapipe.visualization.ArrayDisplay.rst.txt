@@ -1,0 +1,33 @@
+ArrayDisplay
+============
+
+.. currentmodule:: ctapipe.visualization
+
+.. autoclass:: ArrayDisplay
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~ArrayDisplay.values
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ArrayDisplay.add_ellipse
+      ~ArrayDisplay.add_polygon
+      ~ArrayDisplay.overlay_axis
+      ~ArrayDisplay.overlay_moments
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: values
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: add_ellipse
+   .. automethod:: add_polygon
+   .. automethod:: overlay_axis
+   .. automethod:: overlay_moments

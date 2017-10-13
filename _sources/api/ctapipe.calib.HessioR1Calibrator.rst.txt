@@ -1,0 +1,29 @@
+HessioR1Calibrator
+==================
+
+.. currentmodule:: ctapipe.calib
+
+.. autoclass:: HessioR1Calibrator
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~HessioR1Calibrator.name
+      ~HessioR1Calibrator.origin
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~HessioR1Calibrator.calibrate
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: name
+   .. autoattribute:: origin
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: calibrate

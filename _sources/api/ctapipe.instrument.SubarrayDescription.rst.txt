@@ -1,0 +1,43 @@
+SubarrayDescription
+===================
+
+.. currentmodule:: ctapipe.instrument
+
+.. autoclass:: SubarrayDescription
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~SubarrayDescription.footprint
+      ~SubarrayDescription.num_tels
+      ~SubarrayDescription.pos_x
+      ~SubarrayDescription.pos_y
+      ~SubarrayDescription.tel
+      ~SubarrayDescription.tel_id
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SubarrayDescription.info
+      ~SubarrayDescription.peek
+      ~SubarrayDescription.select_subarray
+      ~SubarrayDescription.to_table
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: footprint
+   .. autoattribute:: num_tels
+   .. autoattribute:: pos_x
+   .. autoattribute:: pos_y
+   .. autoattribute:: tel
+   .. autoattribute:: tel_id
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: info
+   .. automethod:: peek
+   .. automethod:: select_subarray
+   .. automethod:: to_table
