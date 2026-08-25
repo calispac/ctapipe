@@ -1,0 +1,270 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "**"
+  pull_request:
+
+env:
+  NUMBA_NUM_THREADS: 1
+  OMP_NUM_THREADS: 1
+  MKL_NUM_THREADS: 1
+  MPLBACKEND: Agg
+  PYTEST_ADDOPTS: --color=yes
+  GITHUB_PR_NUMBER: ${{ github.event.number }}
+  XDG_CACHE_HOME: "${{ github.workspace }}/.cache"
+  CTAPIPE_CACHE: "${{ github.workspace }}/.cache/ctapipe"
+
+jobs:
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Check README syntax
+        run: |
+          pip install restructuredtext-lint
+          restructuredtext-lint README.rst
+      - uses: pre-commit/action@v3.0.1
+        with:
+          extra_args: --files $(git diff origin/main --name-only)
+
+  tests:
+    runs-on: ${{ matrix.os }}
+    needs: lint
+    strategy:
+      # here until the issues downloading from the DESY server are resolved
+      # we'd actually want to fail fast usually, but with the recurring failures with the
+      # test data server it becomes essentially impossible to get a green CI run if a
+      # failing job cancels all others.
+      fail-fast: false
+      matrix:
+        include:
+          - name: Linux (3.12, mamba, oldest-deps)
+            os: ubuntu-24.04
+            python-version: "3.12"
+            install-method: mamba
+            extras: tests,all
+            extra-args: ["oldest-deps"]
+            pytest-markers: "-m 'not vizier'"
+
+          - name: Linux (3.12, pip, minimal-dependencies)
+            os: ubuntu-24.04
+            python-version: "3.12"
+            install-method: pip
+            extras: tests
+            pytest-markers: "-m 'not vizier'"
+
+          - name: Linux (3.12, pip, coverage)
+            os: ubuntu-24.04
+            python-version: "3.12"
+            install-method: pip
+            extra-args: ["codecov"]
+            extras: tests,all
+
+          - name: Linux (3.13, mamba)
+            os: ubuntu-24.04
+            python-version: "3.13"
+            install-method: mamba
+            extras: tests,all
+            pytest-markers: "-m 'not vizier'"
+
+          - name: Linux (3.14, mamba)
+            os: ubuntu-24.04
+            python-version: "3.14"
+            install-method: mamba
+            extras: tests,all
+            pytest-markers: "-m 'not vizier'"
+
+          - name: macos (3.12, arm64, pip)
+            os: macos-26
+            python-version: "3.12"
+            install-method: pip
+            extras: tests,all
+            pytest-markers: "-m 'not vizier'"
+
+          - name: macos (3.14, arm64, mamba)
+            os: macos-26
+            python-version: "3.14"
+            install-method: mamba
+            extras: tests,all
+            pytest-markers: "-m 'not vizier'"
+
+
+    defaults:
+      run:
+        # We need login shells (-l) for micromamba to work.
+        shell: bash -leo pipefail {0}
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Ensure astropy cache dir
+        run: |
+          mkdir -p $XDG_CACHE_HOME/astropy
+          mkdir -p $CTAPIPE_CACHE
+
+      - name: restore cache data
+        id: cache-restore
+        uses: actions/cache/restore@v6
+        with:
+          path: |
+            .cache/ctapipe
+            .cache/astropy
+          key: ctapipe-test-data-desy
+          restore-keys: |
+            ctapipe-test-data-desy
+
+      - name: debug caches
+        run: |
+          find .cache
+
+      - name: Prepare mamba installation
+        if: matrix.install-method == 'mamba' &&  contains(github.event.pull_request.labels.*.name, 'documentation-only') == false
+        env:
+          PYTHON_VERSION: ${{ matrix.python-version }}
+        run: |
+          # setup correct python version
+          sed -i -e "s/- python=.*/- python=$PYTHON_VERSION/g" environment.yml
+
+      - name: mamba setup
+        if: matrix.install-method == 'mamba' && contains(github.event.pull_request.labels.*.name, 'documentation-only') == false
+        uses: mamba-org/setup-micromamba@v3
+        with:
+          environment-file: environment.yml
+          cache-downloads: true
+
+      - name: Python setup
+        if: matrix.install-method == 'pip' && contains(github.event.pull_request.labels.*.name, 'documentation-only') == false
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+          check-latest: true
+
+      - if: matrix.install-method == 'pip' && runner.os == 'macOS' && contains(github.event.pull_request.labels.*.name, 'documentation-only') == false
+        name: Fix Python PATH on macOS
+        # See https://github.com/actions/setup-python/issues/132 and
+        # https://github.com/actions/setup-python/issues/132#issuecomment-779406058
+        # Login shells on macOS prepend system paths, so we need to
+        # prepend the python path from actions/setup-python.
+        # Micromamba sets up ~/.bash_profile, where we need to set the path now.
+        run: |
+          tee -a ~/.bash_profile <<<'export PATH="$pythonLocation/bin:$PATH"'
+
+      - name: Install dependencies
+        if: contains(github.event.pull_request.labels.*.name, 'documentation-only') == false
+        env:
+          PYTHON_VERSION: ${{ matrix.python-version }}
+          EXTRAS: ${{ matrix.extras }}
+        run: |
+          python --version | grep "Python ${PYTHON_VERSION}"
+          # numba/llvmlite do not provide wheels for macos-intel in recent releases, but pip tries to download
+          # the latest release and build it from source. Force only wheels being considered for these to packages.
+          pip install --only-binary llvmlite --only-binary numba -e ".[${EXTRAS}]"
+          pip install ./test_plugin
+          pip freeze
+
+      - if: contains(matrix.extra-args, 'oldest-deps') && contains(github.event.pull_request.labels.*.name, 'documentation-only') == false
+        run: |
+          micromamba install -n cta-dev -y numpy=1.26 numba=0.59.0 scipy=1.15 astropy=6.1 matplotlib=3.8 eventio=1.11.6
+          micromamba list -n cta-dev
+
+      - name: ctapipe-info
+        if: contains(github.event.pull_request.labels.*.name, 'documentation-only') == false
+        run: |
+          ctapipe-info --all
+
+      - name: Setup coverage
+        if: contains(matrix.extra-args, 'codecov') && contains(github.event.pull_request.labels.*.name, 'documentation-only') == false
+        run: |
+          echo "COVERAGE_CORE=sysmon" >> $GITHUB_ENV
+          echo "PYTEST_ADDOPTS=--cov --cov-report=xml $PYTEST_ADDOPTS" >> $GITHUB_ENV
+
+      - name: Tests
+        if: contains(github.event.pull_request.labels.*.name, 'documentation-only') == false
+        run: |
+          pytest -n auto --dist loadscope ${{ matrix.pytest-markers }} \
+            --doctest-modules --doctest-glob='*.rst' \
+            --ignore=docs/conf.py
+
+          ctapipe-info --version
+
+      - name: Store info for sonar
+        env:
+          REF_NAME: ${{ github.ref_name }}
+          REF_TYPE: ${{ github.ref_type }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          SOURCE_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
+          SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
+          TARGET_BRANCH: ${{ github.event.pull_request.base.ref }}
+        run: |
+          pip install setuptools_scm
+          echo "PR_NUMBER=${PR_NUMBER}" >> sonar_env
+          echo "SOURCE_REPOSITORY=${SOURCE_REPOSITORY}" >> sonar_env
+          echo "SOURCE_BRANCH=${SOURCE_BRANCH}" >> sonar_env
+          echo "TARGET_BRANCH=${TARGET_BRANCH}" >> sonar_env
+          echo "PROJECT_VERSION=$(python -m setuptools_scm)" >> sonar_env
+          cat sonar_env
+
+      # upload coverage report for sonar workflow
+      - uses: actions/upload-artifact@v7
+        if: contains(matrix.extra-args, 'codecov') && contains(github.event.pull_request.labels.*.name, 'documentation-only') == false
+        with:
+          name: ctapipe-coverage-report
+          path: |
+            coverage.xml
+            sonar_env
+
+      - name: cache data
+        # make sure the largest test job uploads the cached data
+        if: contains(matrix.extra-args, 'codecov') && contains(github.event.pull_request.labels.*.name, 'documentation-only') == false
+        uses: actions/cache/save@v6
+        with:
+          path: |
+            .cache/ctapipe
+            .cache/astropy
+          key: ctapipe-test-data-desy-${{ github.run_id }}-${{ github.run_attempt }}
+
+  docs:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: restore cache data
+        id: cache-restore
+        uses: actions/cache/restore@v6
+        with:
+          path: |
+            .cache/ctapipe
+            .cache/astropy
+          key: ctapipe-test-data-desy
+          restore-keys: |
+            ctapipe-test-data-desy
+
+      - name: Install doc dependencies
+        run: |
+          sudo apt update --yes && sudo apt install --yes git build-essential pandoc graphviz ffmpeg
+          pip install -U pip towncrier setuptools
+          pip install -e .[docs]
+          pip install ./test_plugin
+          git describe --tags
+          python -c 'import ctapipe; print(ctapipe.__version__)'
+
+      - name: Build docs
+        run: make doc

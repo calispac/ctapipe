@@ -1,4 +1,6 @@
 .pytest_cache
+*.log
+docs/sg_execution_times.rst
 
 # Compiled files
 *.py[co]
@@ -9,6 +11,9 @@ __pycache__
 
 # ignore version cache file (generated automatically when setup.py is run)
 ctapipe/_version_cache.py
+ctapipe/_version.py
+src/ctapipe/_version.py
+
 
 # Ignore .c files by default to avoid including generated code. If you want to
 # add a non-generated .c extension, use `git add -f filename.c`.
@@ -17,22 +22,25 @@ ctapipe/_version_cache.py
 # Other generated files
 */cython_version.py
 htmlcov
-.coverage
+.coverage*
 MANIFEST
 
 # Sphinx
 docs/api
 docs/_build
+docs/auto_examples
 
-# Eclipse editor project files
+# Editors and IDEs
+
+# Visual Studio Code
+.vscode
+# Eclipse
 .project
 .pydevproject
 .settings
-
-# Pycharm editor project files
+# Pycharm
 .idea
-
-# KDevelop editor project files
+# KDevelop
 *kdev4
 
 # Packages/installer info
@@ -80,3 +88,6 @@ distribute-*.tar.gz
 
 *.pstats
 target
+.mypy_cache
+
+provenance.log

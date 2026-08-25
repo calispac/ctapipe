@@ -1,0 +1,270 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm[toml]>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ctapipe"
+description = "Event reconstruction framework for Imaging Atmospheric Cherenkov Telescopes developed for CTAO."
+readme = "README.rst"
+authors = [
+    {name = "ctapipe developers"},
+]
+maintainers = [
+    {name = "Karl Kosack", email = "karl.kosack@cea.fr"},
+    {name = "Maximilian Linhoff", email = "maximilian.linhoff@tu-dortmund.de"},
+]
+license = "BSD-3-Clause"
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Development Status :: 3 - Alpha",
+]
+
+dynamic = ["version"]
+requires-python = ">=3.12"
+
+dependencies = [
+    "astropy >=6.1,<9.0.0",
+    "docutils",
+    "joblib",
+    "numba >=0.59.0",
+    "numpy >=1.26,<3.0.0",
+    "hist",
+    "packaging",
+    "psutil",
+    "pyyaml >=5.1",
+    "requests",
+    "scikit-learn !=1.4.0", # 1.4.0 breaks with astropy tables, before and after works
+    "scipy ~=1.15",
+    "tables ~=3.4",
+    "tqdm >=4.32",
+    "traitlets ~=5.6",
+]
+
+[project.optional-dependencies]
+
+eventio = [
+    "eventio >=1.9.1,<3.0.0",
+]
+
+# all is with all optional *runtime* dependencies
+# use `dev` to get really all dependencies
+all = [
+    "bokeh ~=3.0",
+    "ctapipe[eventio]",
+    "iminuit >=2",
+    "matplotlib ~=3.0",
+    "pyirf ~=0.14.0",
+    "zernike",
+]
+
+tests = [
+    # at the moment, essentially all tests rely on test data from simtel
+    # it doesn't make sense to skip all of these.
+    "ctapipe[eventio]",
+    "h5py",
+    "pandas",
+    "pytest >=9.0",
+    "pytest-cov",
+    "pytest-xdist",
+    "pytest_astropy_header",
+    "tomli",
+    "astroquery",
+]
+
+docs = [
+    "ctapipe[all]",
+    "ffmpeg-python",
+    "graphviz",
+    "hist[plot]",
+    "ipython",
+    "jupyter",
+    "nbsphinx",
+    "notebook",
+    "numpydoc",
+    "pandas",
+    "pydata_sphinx_theme",
+    "pypandoc",
+    "sphinx~=8.2.0",
+    "sphinx-automodapi==0.22.0",
+    "sphinx-design",
+    "sphinx-gallery >= 0.16.0",
+    "sphinxcontrib-bibtex",
+    "sphinx-changelog",
+]
+
+dev = [
+    "ctapipe[all,docs,tests]",
+    "pre-commit",
+    "setuptools_scm[toml]",
+]
+
+
+[project.scripts]
+ctapipe-info = "ctapipe.tools.info:main"
+ctapipe-dump-instrument = "ctapipe.tools.dump_instrument:main"
+ctapipe-display-dl1 = "ctapipe.tools.display_dl1:main"
+ctapipe-process = "ctapipe.tools.process:main"
+ctapipe-merge = "ctapipe.tools.merge:main"
+ctapipe-optimize-event-selection = "ctapipe.tools.optimize_event_selection:main"
+ctapipe-compute-irf = "ctapipe.tools.compute_irf:main"
+ctapipe-fileinfo = "ctapipe.tools.fileinfo:main"
+ctapipe-quickstart = "ctapipe.tools.quickstart:main"
+ctapipe-calculate-pixel-statistics = "ctapipe.tools.calculate_pixel_stats:main"
+ctapipe-train-energy-regressor = "ctapipe.tools.train_energy_regressor:main"
+ctapipe-train-particle-classifier = "ctapipe.tools.train_particle_classifier:main"
+ctapipe-train-disp-reconstructor = "ctapipe.tools.train_disp_reconstructor:main"
+ctapipe-apply-models = "ctapipe.tools.apply_models:main"
+ctapipe-store-astropy-cache = "ctapipe.tools.store_astropy_cache:main"
+
+[project.entry-points.ctapipe_io]
+HDF5EventSource = "ctapipe.io.hdf5eventsource:HDF5EventSource"
+SimTelEventSource = "ctapipe.io.simteleventsource:SimTelEventSource"
+
+[project.entry-points.ctapipe_monitoring]
+HDF5MonitoringSource = "ctapipe.io.hdf5monitoringsource:HDF5MonitoringSource"
+
+[project.entry-points.ctapipe_reco]
+HillasIntersection = "ctapipe.reco.hillas_intersection:HillasIntersection"
+HillasReconstructor = "ctapipe.reco.hillas_reconstructor:HillasReconstructor"
+DispReconstructor = "ctapipe.reco.sklearn:DispReconstructor"
+EnergyRegressor = "ctapipe.reco.sklearn:EnergyRegressor"
+ParticleClassifier = "ctapipe.reco.sklearn:ParticleClassifier"
+
+[project.urls]
+repository = "https://github.com/cta-observatory/ctapipe/"
+documentation = "https://ctapipe.readthedocs.io/"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["ctapipe._dev_version"]
+
+[tool.setuptools_scm]
+write_to = "src/ctapipe/_version.py"
+
+[tool.pytest]
+minversion = "9"
+testpaths = ["src/ctapipe", "docs"]
+log_cli_level = "INFO"
+xfail_strict = true
+astropy_header = true
+markers = [
+  "vizier"
+]
+
+# print summary of failed tests, force errors if settings are misspelled
+addopts = ["-ra", "--strict-config", "--strict-markers", "--ignore-glob=src/ctapipe/_dev_version"]
+
+filterwarnings = [
+    "error::DeprecationWarning",
+    "error::astropy.utils.exceptions.AstropyDeprecationWarning",
+    "error::ctapipe.utils.deprecation.CTAPipeDeprecationWarning",
+    "error::ctapipe.instrument.FromNameWarning",
+    "error::ctapipe.core.traits.NoneDefaultNotAllowedWarning",
+    "error::tables.UnclosedFileWarning",
+    "ignore:`np.MachAr` is deprecated:DeprecationWarning",
+    "ignore::ctapipe.core.provenance.MissingReferenceMetadata",
+    # inside matplotlib, already fixed but occurs in "oldest-deps" tests
+    "ignore:'parseString':DeprecationWarning:matplotlib",
+    "ignore:'resetCache':DeprecationWarning:matplotlib",
+    "ignore:'oneOf':DeprecationWarning:matplotlib",
+    "ignore:'leaveWhiteSpace':DeprecationWarning:matplotlib",
+    "ignore:'setName':DeprecationWarning:matplotlib",
+    "ignore:'setParseAction':DeprecationWarning:matplotlib",
+    "ignore:'endQuoteChar':DeprecationWarning:matplotlib",
+    "ignore:'unquoteResults':DeprecationWarning:matplotlib",
+    "ignore:'enablePackrat':DeprecationWarning:matplotlib",
+    "ignore:'parseAll':DeprecationWarning:pyparsing",
+    # only ignore from joblib, should raise if its in our code directly
+    "ignore:Setting the shape on a NumPy array has been deprecated in NumPy 2.5:DeprecationWarning:joblib",
+    "ignore:The chararray class is deprecated:DeprecationWarning",
+    "ignore:Setting the dtype on a NumPy array",
+]
+norecursedirs = [
+    ".git",
+    "_build",
+    "auto_examples",
+    "build",
+]
+
+[tool.coverage.run]
+relative_files = true
+source = ["src"]
+parallel = true
+concurrency = ["multiprocessing", "thread"]
+omit = ["src/ctapipe/_version.py"]
+patch = ["subprocess"]
+
+[tool.towncrier]
+    package = "ctapipe"
+    directory = "docs/changes"
+    filename = "CHANGES.rst"
+    template = "docs/changes/template.rst"
+    # let towncrier create proper links to the merged PR
+    issue_format = "`#{issue} <https://github.com/cta-observatory/ctapipe/pull/{issue}>`__"
+
+    [tool.towncrier.fragment.feature]
+        name = "New Features"
+        showcontent = true
+
+    [tool.towncrier.fragment.bugfix]
+        name = "Bug Fixes"
+        showcontent = true
+
+    [tool.towncrier.fragment.api]
+        name = "API Changes"
+        showcontent = true
+
+    [tool.towncrier.fragment.datamodel]
+        name = "Data Model Changes"
+        showcontent = true
+
+    [tool.towncrier.fragment.optimization]
+        name = "Refactoring and Optimization"
+        showcontent = true
+
+    [tool.towncrier.fragment.maintenance]
+        name = "Maintenance"
+        showcontent = true
+
+    [[tool.towncrier.section]]
+        name = ""
+        path = ""
+
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+extend-select = [
+    "I",  # isort
+]
+ignore = []
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.per-file-ignores]
+# notebooks have imports in all cells
+"examples/**" = ["I"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint.isort]
+known-first-party = ["ctapipe"]
+
+
+[tool.codespell]
+ignore-words = ".codespell-ignores"

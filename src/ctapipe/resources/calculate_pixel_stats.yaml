@@ -1,0 +1,35 @@
+PixelStatisticsCalculatorTool:
+  allowed_tels: [1, 2, 3, 4]
+  input_column_name: image
+
+PixelStatisticsCalculator:
+  stats_aggregator_type:
+    - ["type", "LST*", "SigmaClippingAggregator"]
+    - ["type", "MST*", "PlainAggregator"]
+
+  faulty_pixels_fraction: 0.1
+  outlier_detector_list:
+    - name: MedianOutlierDetector
+      apply_to: median
+      config:
+        median_range_factors: [-15, 15]
+    - name: RangeOutlierDetector
+      apply_to: median
+      config:
+        validity_range: [-20, 120]
+    - name: StdOutlierDetector
+      apply_to: std
+      config:
+        std_range_factors: [-15, 15]
+
+SigmaClippingAggregator:
+  chunking_type: SizeChunking
+  max_sigma: 4
+  iterations: 5
+
+PlainAggregator:
+  chunking_type: SizeChunking
+
+SizeChunking:
+  chunk_size: 2500
+  chunk_shift: 1000

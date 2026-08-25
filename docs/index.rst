@@ -1,120 +1,121 @@
-.. include:: references.txt
+.. include:: references.rst
+
+:html_theme.sidebar_secondary.remove: true
+:html_theme.sidebar_primary.remove: true
 
 .. _ctapipe:
 
-=====================================================
- CTA Experimental Pipeline Framework (:mod:`ctapipe`)
-=====================================================
+##############################################
+Prototype CTA Pipeline Framework (``ctapipe``)
+##############################################
 
 .. currentmodule:: ctapipe
 
-**version**:  |version|
+|
 
-.. image:: event.png
+.. image:: _static/ctapipe_logo.webp
+   :class: only-light
    :align: center
    :width: 90%
+   :alt: The ctapipe logo.
 
-What is ctapipe?
-================
-
-`ctapipe` is an experimental framework for the data processing
-pipelines for CTA.
-
-.. CAUTION::
-   This is not yet stable code, so expect large and rapid changes to
-   structure and functionality as we explore various design choices.
-
-* Code, feature requests, bug reports, pull requests: https://github.com/cta-observatory/ctapipe
-* Docs: https://cta-observatory.github.io/ctapipe/
-* License: BSD-3
-* Python 3.4 or later (Python 2 is not supported)
+.. image:: _static/ctapipe_logo_dark.webp
+   :class: only-dark
+   :align: center
+   :width: 90%
+   :alt: The ctapipe logo.
 
 
+
+**Version**: |version| **Date**: |today|
+
+**Useful links**:
+`Source Repository <https://github.com/cta-observatory/ctapipe>`__ |
+`Issue Tracker <https://github.com/cta-observatory/ctapipe/issues>`__ |
+`Discussions <https://github.com/cta-observatory/ctapipe/discussions>`__
+
+**License**: BSD-3
+
+**Python**: |python_requires|
+
+
+
+``ctapipe`` is a framework for prototyping the low-level data processing
+algorithms for the Cherenkov Telescope Array Observatory (CTAO).
 
 .. _ctapipe_docs:
 
-General documentation
-=====================
-
 .. toctree::
   :maxdepth: 1
-  :glob:
+  :hidden:
 
-  getting_started/index
-  development/index
-  tools/index
-  */index
-  FAQ
-  bibliography
+  user-guide/index
+  developer-guide/index
+  api-reference/index
   changelog
-
-Module API Status (relative to next release)
-============================================
-
-* **stable** = should not change drastically in next release
-* **caution** = mostly stable, but expect some changes
-* **unstable** = expect large changes and avoid heavy reliance
-* **experimental** = stable feature, but under evaluation
-* **deprecated** = do not use
-
-================  ===============
- Module           Status
-================  ===============
-`analysis`        **stable**
-`calib`           **stable**
-`coordinates`     caution
-`core`            **stable**
-`flow`            experimental
-`instrument`      **stable**
-`plotting`        caution
-`reco`            **stable**
-`utils`           **stable**
-`visualization`   **stable**
-================  ===============
+  bibliography
 
 
-Authors (as of 2017-10-11)
-==========================
-(computed from the list of GIT commits)
 
-- Karl Kosack
-- Jason Watson
-- Dan Parsons
-- Jacquemier
-- Tino Michael
-- Maximilian Nöthe
-- Christoph Deil
-- Alison Mitchell
-- justuszorn
-- Samuel Timothy Spencer
-- AMWMitchell
-- Raquel de los Reyes
-- Michele Mastropietro
-- Jeremie DECOCK
-- Kai Brügge
-- tino-michael
-- Abelardo Moralejo Olaizola
-- Markus Gaug
-- tialis
-- fvisconti
-- Wrijupan Bhattacharyya
-- bultako
-- Paolo Cumani
-- Tristan Carel
-- Michael Punch
-- Miguel Nievas
-- Orel Gueta
-- Tarek Hassan
-- Daniel Parsons
-- GernotMaier
-- David Landriu
-- labsaha
-- Pierre Aubert
+.. grid:: 1 2 2 3
+
+    .. grid-item-card::
+
+        :octicon:`book;40px`
+
+        User Guide
+        ^^^^^^^^^^
+
+        Learn how to get started as a user. This guide
+        will help you install ctapipe.
+
+        +++
+
+        .. button-ref:: user-guide/index
+            :expand:
+            :color: primary
+            :click-parent:
+
+            To the user guide
 
 
-Development Help
-================
+    .. grid-item-card::
 
-* Development workflow examples from AstroPy: http://astropy.readthedocs.org/en/latest/development/workflow/development_workflow.html
-* GIT tutorial: https://www.atlassian.com/git/tutorials/syncing/git-pull
-* Code distribution and Packaging https://packaging.python.org/en/latest/
+        :octicon:`person-add;40px`
+
+        Developer Guide
+        ^^^^^^^^^^^^^^^
+
+        Learn how to get started as a developer.
+        This guide will help you install ctapipe for development
+        and explains how to contribute.
+
+        +++
+
+        .. button-ref:: developer-guide/index
+            :expand:
+            :color: primary
+            :click-parent:
+
+            To the developer guide
+
+
+    .. grid-item-card::
+
+        :octicon:`code;40px`
+
+        API Docs
+        ^^^^^^^^
+
+        The API docs contain detailed descriptions of
+        of the various modules, classes and functions
+        included in ctapipe.
+
+        +++
+
+        .. button-ref:: api-reference/index
+            :expand:
+            :color: primary
+            :click-parent:
+
+            To the API docs

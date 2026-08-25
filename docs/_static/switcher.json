@@ -1,0 +1,107 @@
+[
+  {
+    "name": "dev",
+    "version": "latest",
+    "url": "https://ctapipe.readthedocs.io/en/latest/"
+  },
+  {
+    "name": "stable",
+    "version": "stable",
+    "url": "https://ctapipe.readthedocs.io/en/stable/"
+  },
+  {
+    "name": "v0.30.0",
+    "version": "v0.30.0",
+    "url": "https://ctapipe.readthedocs.io/en/v0.30.0/"
+  },
+  {
+    "name": "v0.29.0",
+    "version": "v0.29.0",
+    "url": "https://ctapipe.readthedocs.io/en/v0.29.0/"
+  },
+  {
+    "name": "v0.28.0",
+    "version": "v0.28.0",
+    "url": "https://ctapipe.readthedocs.io/en/v0.28.0/"
+  },
+  {
+    "name": "v0.27.0",
+    "version": "v0.27.0",
+    "url": "https://ctapipe.readthedocs.io/en/v0.27.0/"
+  },
+  {
+    "name": "v0.26.0",
+    "version": "v0.26.0",
+    "url": "https://ctapipe.readthedocs.io/en/v0.26.0/"
+  },
+  {
+    "name": "v0.25.1",
+    "version": "v0.25.1",
+    "url": "https://ctapipe.readthedocs.io/en/v0.25.1/"
+  },
+  {
+    "name": "v0.24.0",
+    "version": "v0.24.0",
+    "url": "https://ctapipe.readthedocs.io/en/v0.24.0/"
+  },
+  {
+    "name": "v0.23.2",
+    "version": "v0.23.2",
+    "url": "https://ctapipe.readthedocs.io/en/v0.23.2/"
+  },
+  {
+    "name": "v0.22.0",
+    "version": "v0.22.0",
+    "url": "https://ctapipe.readthedocs.io/en/v0.22.0/"
+  },
+  {
+    "name": "v0.21.2",
+    "version": "v0.21.2",
+    "url": "https://ctapipe.readthedocs.io/en/v0.21.2/"
+  },
+  {
+    "name": "v0.20.0",
+    "version": "v0.20.0",
+    "url": "https://ctapipe.readthedocs.io/en/v0.20.0/"
+  },
+  {
+    "name": "v0.19.3",
+    "version": "v0.19.3",
+    "url": "https://ctapipe.readthedocs.io/en/v0.19.3/"
+  },
+  {
+    "name": "v0.18.1",
+    "version": "v0.18.1",
+    "url": "https://ctapipe.readthedocs.io/en/v0.18.1/"
+  },
+  {
+    "name": "v0.17.0",
+    "version": "v0.17.0",
+    "url": "https://ctapipe.readthedocs.io/en/v0.17.0/"
+  },
+  {
+    "name": "v0.16.0",
+    "version": "v0.16.0",
+    "url": "https://ctapipe.readthedocs.io/en/v0.16.0/"
+  },
+  {
+    "name": "v0.15.0",
+    "version": "v0.15.0",
+    "url": "https://ctapipe.readthedocs.io/en/v0.15.0/"
+  },
+  {
+    "name": "v0.14.0",
+    "version": "v0.14.0",
+    "url": "https://ctapipe.readthedocs.io/en/v0.14.0/"
+  },
+  {
+    "name": "v0.12.0-rtd",
+    "version": "v0.12.0-rtd",
+    "url": "https://ctapipe.readthedocs.io/en/v0.12.0-rtd/"
+  },
+  {
+    "name": "v0.11.0-rtd",
+    "version": "v0.11.0-rtd",
+    "url": "https://ctapipe.readthedocs.io/en/v0.11.0-rtd/"
+  }
+]
