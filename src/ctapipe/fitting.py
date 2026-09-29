@@ -2,6 +2,7 @@
 
 import numpy as np
 from numba import njit
+from scipy.stats import linregress
 
 from .core.env import CTAPIPE_DISABLE_NUMBA_CACHE
 
@@ -46,11 +47,22 @@ def linear_regression(X, y):
     y: np.array
         y values
     """
-    mat = X.T @ X
-    if np.linalg.det(mat) < EPS:
-        return np.full(2, np.nan)
+    x = X[:, 0]
+    mean_x = np.mean(x)
+    mean_y = np.mean(y)
+    x = x - mean_x
+    y = y - mean_y
+    x_squared_sum = np.sum(x**2)
+    beta = np.full(2, np.nan)
 
-    return np.linalg.inv(mat) @ X.T @ y
+    if x_squared_sum > EPS:
+
+        slope = np.sum(x * y) / x_squared_sum
+        intercept = mean_y - slope * mean_x
+        beta[0] = slope
+        beta[1] = intercept
+
+    return beta
 
 
 @njit(cache=not CTAPIPE_DISABLE_NUMBA_CACHE)
